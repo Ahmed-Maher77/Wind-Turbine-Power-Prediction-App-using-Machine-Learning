@@ -27,7 +27,8 @@ body.nav-active::before {
     background-color: #f0f2f5;
 }
 ::-webkit-scrollbar {
-    width: 3px;
+    width: 4px;
+    height: 4px
 }
 ::-webkit-scrollbar-track {
     background-color: #dedadca8;
@@ -457,6 +458,35 @@ form > button:hover p {
 #dataset .content ul li {
     margin-left: 50px;
 }
+.tableContainer {
+    text-align: center;
+}
+.table {
+    height: 500px;
+    overflow: scroll;
+    border-radius: 5px;
+}
+#dataset .tableContainer h4 {
+    margin-top: 50px;
+}
+table {
+    border: thin solid #d7d7d7;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 7px
+}
+.table th, .table td {
+    border: thin solid #b2b2b2eb;
+    padding: 3px;
+    font-size: 0.9rem;
+}
+.table tr:first-of-type {
+    position: sticky;
+    top: -0.5px;
+    background-color: #d7d7d7;
+    font-weight: 700;
+}
+
 
 
 
@@ -657,6 +687,9 @@ footer p button:hover::after {
     .slider > i {
         display: block
     }
+    #dataset .tableContainer h4 {
+        font-size: 1.5rem;
+    }
     /* Footer */
     footer p button::before,
     footer p button::after {
@@ -742,6 +775,10 @@ footer p button:hover::after {
             "dir date"
             "btn btn";
         padding: 30px;
+    }
+    .table th, .table td {
+        padding: 6px;
+        font-size: 1rem;
     }
     footer p button::after {
         border-width: 12px;

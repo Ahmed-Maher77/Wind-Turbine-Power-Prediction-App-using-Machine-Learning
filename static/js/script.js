@@ -50,32 +50,39 @@ anchors.forEach((a, i, arr) => a.onclick = function() {
     a.classList.add('active-link');
 })
 
-// Image Slider functionality
+
+/* Image Slider functionality */
 const imgs = document.querySelectorAll('#home .imgs-container figure'),
+    dotsContainer = document.querySelector('.slider .dots'),
     dots = document.querySelectorAll('.slider .dots li');
-
-let activeIndex = 0;
-const imgsLength = imgs.length;
-
+let activeIndex = 0,
+    imgsLength = imgs.length,
+    intervalId;
 // Change image based on index
-function changeImage(n) {
+function changeImage(n = 1) {
     if (n > 0 && activeIndex === imgsLength - 1) {
         activeIndex = 0
     } else if (n < 0 && activeIndex === 0) {
         activeIndex = imgsLength - 1
-    } else {
-        activeIndex += (n);
     }
-    // Show or hide images based on active index
-    imgs.forEach((pic, index) => {
-        activeIndex === index ?
-            pic.style.display = 'block' :
-            pic.style.display = 'none'
-    });
-    // Highlight the corresponding dot
+    else activeIndex += (n);
+    imgs.forEach((pic, index, arr) => pic.style.display = (activeIndex === index)? 'block' : 'none');
+    dots.forEach((dot, index) => dot.classList.toggle('active-dot', activeIndex === index));
+    resetInterval()
+}
+// Function to handle slider navigation via dots
+dotsContainer.onclick = function(event) {
     dots.forEach((dot, index) => {
-        activeIndex === index ?
-            dot.classList.add('active-dot') :
-            dot.classList.remove('active-dot')
+        if (event.target === dot) {
+            imgs.forEach((img, i) => img.style.display = (i === index)? 'block' : 'none');
+            dots.forEach((dot, n) => dot.classList.toggle('active-dot', n === index));
+        }
     });
+    resetInterval()
+};
+intervalId = setInterval(changeImage, 3000)
+// Reset Interval after each click
+function resetInterval() {
+    clearInterval(intervalId);
+    intervalId = setInterval(changeImage, 3000)
 }
