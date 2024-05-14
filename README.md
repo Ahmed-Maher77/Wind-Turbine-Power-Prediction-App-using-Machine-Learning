@@ -4,7 +4,7 @@ This project involves the development of a machine learning model deployed on a 
 <br>
 
 **Used Technologies:** Python - Flask Framework - JSON - JavaScript - HTML/HTML5 - CSS/CSS3 - PWA - Python Libraries (pandas - numpy - matplotlib - seaborn - sklearn - catboost - xgboost) - ML Algorithms (GradientBoostingRegressor - SVR - RandomForestRegressor - LinearRegression - ExtraTreesRegressor - AdaBoostRegressor - DecisionTreeRegressor - XGBRegressor - XGBRFRegressor - CatBoostRegressor) <br>
-**Demo (Live Preview):** <a src="https://mlwindturbine.pythonanywhere.com/" target="_blank">https://mlwindturbine.pythonanywhere.com/</a>
+**Demo (Live Preview):** <a href="https://mlwindturbine.pythonanywhere.com/" target="_blank">https://mlwindturbine.pythonanywhere.com/</a>
 
 <br>
 
