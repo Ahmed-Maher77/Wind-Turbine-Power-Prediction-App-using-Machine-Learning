@@ -964,6 +964,7 @@ footer p button:hover::after {
 :root.dark-active input:not([type="submit"]),
 :root.dark-active textarea {
     background: #171717;
+    color: var(--mainColor)
 }
 :root.dark-active .from-button {
     color: var(--mainColor) 
