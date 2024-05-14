@@ -1,131 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-        name="description"
-        content="Harnessing renewable energy with machine learning: Predict wind turbine power output using advanced machine learning algorithms. Explore the latest technologies such as Flask, Python, scikit-learn, and XGBoost."
-    />
-    <meta
-        name="keywords"
-        content="wind turbine power prediction, renewable energy, machine learning, Flask, Python, scikit-learn, XGBoost, web application"
-    />
-    <title>Wind Power Prediction Result</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            height: 100vh;
-            min-height: 700px;
-            max-height: 900px;
-            font-family: "Cairo", sans-serif;
-            background-color: #f5f5f5a8;
-            text-align: center;
-            display: flex;;
-            flex-direction: column;
-        }
-        /* Slider */
-        .slider {
-            width: 100%;
-            min-width: 100%;
-            height: 450px;
-        }
-        .picsContainer,
-        .picsContainer img {
-            width: 100%;
-            min-width: 100%;
-            height: 100%;
-        }
-        .picsContainer {
-            overflow: hidden;
-            filter: brightness(0.5);
-            display: flex;
-        }
-        .picsContainer img {
-            object-fit: cover;
-        }
-        /* Main Section */
-        main {
-            width: calc(100% - 300px);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 20px;
-            width: 100%;
-            padding: 50px 0;
-        }
-        main h1 {
-            font-size: 1.6rem;
-            line-height: 30px;
-            margin-bottom: 10px;
-        }
-        mark {
-            color: #fff;
-            background: #0bcc0b;
-            padding: 9px;
-        }
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Harnessing renewable energy with machine learning: Predict wind turbine power output using advanced machine learning algorithms. Explore the latest technologies such as Flask, Python, scikit-learn, and XGBoost."
+		/>
+		<meta
+			name="keywords"
+			content="wind turbine power prediction, renewable energy, machine learning, Flask, Python, scikit-learn, XGBoost, web application"
+		/>
+		<title>Wind Power Prediction Result</title>
+        <!-- Page Icon -->
+		<link rel="icon" href="{{ url_for('static', filename='images/logo.jpg') }}"/>
+        <!-- Font Awesome -->
+		<link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"/>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body {
+				height: 100vh;
+				min-height: 700px;
+				max-height: 900px;
+				font-family: "Cairo", sans-serif;
+				background-color: #f5f5f5a8;
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+			}
+			/* Slider */
+			.slider {
+				width: 100%;
+				min-width: 100%;
+				height: 450px;
+			}
+			.picsContainer,
+			.picsContainer img {
+				width: 100%;
+				min-width: 100%;
+				height: 100%;
+			}
+			.picsContainer {
+				overflow: hidden;
+				filter: brightness(0.5);
+				display: flex;
+			}
+			.picsContainer img {
+				object-fit: cover;
+			}
+			/* Main Section */
+			main {
+				width: calc(100% - 300px);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				gap: 20px;
+				width: 100%;
+				padding: 140px 0 50px;
+                position: relative
+			}
+			main button {
+                padding: 15px;
+				font-size: 1rem;
+				border: thin solid #a9a9a9;
+				border-radius: 8px;
+                position: absolute;
+                top: 27px;
+                left: 27px;
+                background: #3f3f3f;
+                color: #fff;
+                cursor: pointer;
+                transition: 0.3s
+			}
+			main button:hover {
+                background: transparent;
+                color: #000
+			}
+            main button i {
+                margin-right: 10px;
+                font-size: 18px;
+            }
+			main h1 {
+				font-size: 1.6rem;
+				line-height: 30px;
+				margin-bottom: 10px;
+			}
+			mark {
+				color: #fff;
+				background: #0bcc0b;
+				padding: 9px;
+			}
 
-        /* Medium devices (tablets, 768px and up) */
-        @media (min-width: 768px) {
-            body {
-                flex-direction: row;
-            }
-            h1 {
-                font-size: 1.7rem;
-            }
-            .slider {
-                width: 300px;
-                min-width: 300px;
-                height: 100%;
-            }
-        }
-        /* Large devices (laptops, 992px and up) */
-        @media (min-width: 992px) {
-            h1 {
-                font-size: 1.9rem;
-            }
-            .slider {
-                width: 500px;
-                min-width: 500px;
-            }
-        }
-        /* X-Large devices (desktops, 1200px and up) */
-        @media (min-width: 1200px) {
-            h1 {
-                font-size: 2.1rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="slider">
-        <div class="picsContainer">
-            <img src="{{ url_for('static', filename='images/result-img-1.jpg') }}" alt="Wind Turbine 1">
-            <img src="{{ url_for('static', filename='images/result-img-2.jpg') }}" alt="Wind Turbine 2">
-            <img src="{{ url_for('static', filename='images/result-img-3.jpg') }}" alt="Wind Turbine 3">
-            <img src="{{ url_for('static', filename='images/result-img-4.jpg') }}" alt="Wind Turbine 4">
-            <img src="{{ url_for('static', filename='images/result-img-5.jpg') }}" alt="Wind Turbine 5">
-        </div>
-    </div>
-    <main>
-        <h1>Wind Power Prediction Result</h1>
-        <p>LV Active Power is: <mark>{{ lv_active_power }}</mark></p>
-    </main>
-    <script>
-        const imgs = document.querySelectorAll('.picsContainer img')
-        let active = 0;
-        function autoSlider() {
-            imgs.forEach(pic => pic.style.display = 'none') 
-            imgs[active].style.display = 'block'
-            active = (active + 1) % imgs.length;
-        }
-        autoSlider()
-        setInterval(autoSlider, 2000)
-    </script>
-</body>
+			/* Medium devices (tablets, 768px and up) */
+			@media (min-width: 768px) {
+				body {
+					flex-direction: row;
+				}
+				h1 {
+					font-size: 1.7rem;
+				}
+				.slider {
+					width: 300px;
+					min-width: 300px;
+					height: 100%;
+				}
+			}
+			/* Large devices (laptops, 992px and up) */
+			@media (min-width: 992px) {
+				h1 {
+					font-size: 1.9rem;
+				}
+				.slider {
+					width: 500px;
+					min-width: 500px;
+				}
+			}
+			/* X-Large devices (desktops, 1200px and up) */
+			@media (min-width: 1200px) {
+				h1 {
+					font-size: 2.1rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="slider">
+			<div class="picsContainer">
+				<img
+					src="{{ url_for('static', filename='images/result-img-1.jpg') }}"
+					alt="Wind Turbine 1"
+				/>
+				<img
+					src="{{ url_for('static', filename='images/result-img-2.jpg') }}"
+					alt="Wind Turbine 2"
+				/>
+				<img
+					src="{{ url_for('static', filename='images/result-img-3.jpg') }}"
+					alt="Wind Turbine 3"
+				/>
+				<img
+					src="{{ url_for('static', filename='images/result-img-4.jpg') }}"
+					alt="Wind Turbine 4"
+				/>
+				<img
+					src="{{ url_for('static', filename='images/result-img-5.jpg') }}"
+					alt="Wind Turbine 5"
+				/>
+			</div>
+		</div>
+		<main>
+            <button onclick="window.history.back()">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back To The Model
+            </button>
+			<h1>Wind Power Prediction Result</h1>
+			<p>LV Active Power is: <mark>{{ lv_active_power }}</mark></p>
+		</main>
+
+		<script>
+            // Auto Slider
+			const imgs = document.querySelectorAll(".picsContainer img");
+			let active = 0;
+			function autoSlider() {
+				imgs.forEach((pic) => (pic.style.display = "none"));
+				imgs[active].style.display = "block";
+				active = (active + 1) % imgs.length;
+			}
+			autoSlider();
+			setInterval(autoSlider, 2000);
+		</script>
+	</body>
 </html>

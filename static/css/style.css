@@ -99,6 +99,7 @@ ul {
     top: 0;
     z-index: 99;
     background-color: var(--bgColor);
+    transition: var(--tran3);
     
 }
 #header .container {
@@ -311,21 +312,24 @@ footer p button {
 }
 
 /* Form */
-form {
+#model form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 68px 45px;
+}
+#model form, #contact form {
     max-width: 1050px;
     margin: 50px auto 0;
     padding: 30px 20px 19px;
     border-radius: 6px;
     box-shadow: 0px 0px 17px 2px #dbdbdb99;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 68px 45px;
     background-color: var(--whiteColor);
 }
 label {
     font-weight: 600;
 }
-input:not([type="submit"]) {
+input:not([type="submit"]),
+textarea {
     width: 100%;
     padding: 12px 8px;
     margin-top: 5px;
@@ -336,15 +340,17 @@ input:not([type="submit"]) {
     font-size: 1rem;
     color: #504d4d;
 }
-input:not([type="submit"]):focus {
+input:not([type="submit"]):focus,
+textarea:focus {
     border-color: #09a53a;
     border-style: dashed;
 }
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
     font-size: 0.9rem;
     color: #9c9b9b;
 }
-form > button {
+.from-button {
     width: 130px;
     font-size: 1.2rem;
     background-color: #09a53a;
@@ -359,7 +365,7 @@ form > button {
     overflow: hidden;
     z-index: 5;
 }
-form > button::before {
+.from-button::before {
     content: "";
     position: absolute;
     left: 50%;
@@ -372,17 +378,17 @@ form > button::before {
     clip-path: circle(50%);
     transition-duration: 0.3s;
 }
-form > button:hover::before {
+.from-button:hover::before {
     width: 300px;
     height: 100px;
 }
-form > button i {
+.from-button i {
     margin-left: 5px;
 }
-form > button:hover i {
+.from-button:hover i {
     animation: rotateIcon 0.4s infinite linear;
 }
-form > button:hover p {
+.from-button:hover p {
     display: none;
 }
 @keyframes rotateIcon {
@@ -495,76 +501,6 @@ table {
 
 
 
-
-/* Start Footer */
-footer {
-    text-align: center;
-    color: var(--grayColor);
-    font-size: 1rem;
-    overflow-x: clip;
-    padding: 30px 0 15px 0;
-}
-footer p {
-    /*margin-bottom: 10px;*/
-}
-footer p span,
-footer p button {
-    color: var(--main-color);
-    font-weight: bold;
-}
-footer p button {
-    display: inline-block;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    margin-left: 8px;
-    transition: 0.3s linear;
-    position: relative;
-    cursor: pointer;
-}
-footer p button:hover {
-    color: rgb(0, 213, 255);
-}
-footer p button::before,
-footer p button::after {
-    position: absolute;
-    display: none;
-    z-index: 99;
-}
-footer p button::before {
-    content: attr(title);
-    width: 110px;
-    height: 25px;
-    line-height: 25px;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 5px;
-    background-color: #000000;
-    color: var(--whiteColor);
-    font-weight: normal;
-    font-size: 1rem;
-    left: -90px;
-    top: -51px;
-}
-footer button:last-of-type:before {
-    width: 150px;
-}
-footer p button::after {
-    content: "";
-    border: 10px solid transparent;
-    border-top-color: #000000;
-    right: 10px;
-    top: -17px;
-}
-footer p button:hover::before,
-footer p button:hover::after {
-    display: block;
-}
-
-
-
-
-
 /* Team Members Section */
 #members {
     padding: 60px 0;
@@ -606,6 +542,7 @@ footer p button:hover::after {
 }
 #members .card h4 {
     font-size: 1.4rem
+    
 }
 #members .card p {
     margin-bottom: 30px;
@@ -631,8 +568,122 @@ footer p button:hover::after {
 #members .card a:hover i {
     transform: rotate(360deg)
 }
+/* Contact Section */
+#contact {
+    position: relative;
+    padding-top: 160px;
+}
+#contact header {
+    position: relative;
+    top: -124px
+}
+#contact img {
+    width: 45%;
+    min-width: 250px;
+    max-width: 500px;
+    position: absolute;
+    top: 165px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#contact form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 125px;
+}
+#contact form input,
+#contact form textarea {
+    width: 100%;
+}
 
 
+
+
+
+/* Start Footer */
+footer {
+    text-align: center;
+    color: var(--grayColor);
+    font-size: 1rem;
+    overflow-x: clip;
+    padding: 30px 0 15px 0;
+}       
+footer p span,
+footer p button {
+    color: var(--main-color);
+    font-weight: bold;
+}    
+footer p button {
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-left: 8px;
+    transition: 0.3s linear;
+    position: relative;
+    cursor: pointer;
+}    
+footer p button:hover {
+    color: rgb(0, 213, 255);
+}    
+footer p button::before,
+footer p button::after {
+    position: absolute;
+    display: none;
+    z-index: 99;
+}    
+footer p button::before {
+    content: attr(title);
+    width: 110px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 5px;
+    background-color: #000000;
+    color: var(--whiteColor);
+    font-weight: normal;
+    font-size: 1rem;
+    left: 0;
+    top: -51px;
+}    
+footer button:last-of-type:before {
+    width: 150px;
+}    
+footer p button::after {
+    content: "";
+    border: 10px solid transparent;
+    border-top-color: #000000;
+    right: 10px;
+    top: -17px;
+}    
+footer p button:hover::before,
+footer p button:hover::after {
+    display: block;
+}    
+
+/* Dark Mode */
+.dark {
+    position: fixed;
+    color: var(--mainColor);
+    right: 62px;
+    top: 6.3px;
+    z-index: 9999;
+    transition: var(--tran3);
+}
+.dark i {
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #ffffff96;
+    padding: 8px 13px;
+    font-size: 30px;
+    transition: var(--tran3);
+
+}
+.dark i.fa-sun {
+    display: none;
+}
 
 
 /* Medium devices (tablets, 768px and up) */
@@ -656,6 +707,9 @@ footer p button:hover::after {
     footer p button {
         font-size: 1.1rem;
     }
+    footer p button::after {
+        right: 50%;
+    }
     form {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
@@ -678,7 +732,7 @@ footer p button:hover::after {
     .form-date {
         grid-area: date;
     }
-    form button {
+    .from-button {
         grid-area: btn;
     }
     label {
@@ -690,11 +744,22 @@ footer p button:hover::after {
     #dataset .tableContainer h4 {
         font-size: 1.5rem;
     }
+    /* Contact Section */
+    #contact header {
+        top: -130px
+    }
+    #contact img {
+        top: 60px;
+    }
     /* Footer */
     footer p button::before,
     footer p button::after {
         left: 50%;
         transform: translateX(-50%);
+    }
+    /* Dark Mode */
+    .dark {
+        right: 168px;
     }
 }
 
@@ -780,9 +845,33 @@ footer p button:hover::after {
         padding: 6px;
         font-size: 1rem;
     }
+    /* Contact Section */
+    #contact {
+        padding-top: 230px;
+    }
+    #contact header {
+        top: -185px
+    }
+    #contact form input {
+        width: calc(50% - (20px / 2))
+    }
     footer p button::after {
         border-width: 12px;
         transform: translateX(-50%);
+    }
+    #contact img {
+        top: 81px;
+    }
+    /* Dark Mode */
+    .dark {
+    color: #000;
+    top: 75.3px;
+    right: 0px;
+    background: #dadada;
+    padding: 5px 21px 5px 5px;
+    border-radius: 31px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
     }
 }
 
@@ -806,7 +895,7 @@ footer p button:hover::after {
     footer p button {
         font-size: 1.2rem;
     }
-    form button {
+    .from-button {
         font-size: 1.1rem;
         padding: 12px 0;
     }
@@ -836,4 +925,92 @@ footer p button:hover::after {
     .heading h2 {
         font-size: 2.2rem;
     }
+}
+
+
+
+
+
+:root.dark-active {
+    --mainColor: #ffffff;
+    --secondary-color: #76ABAE;
+    --bgColor: #000;
+    --tran3: 0.3s;
+    --whiteColor: #000;
+    --grayColor: #b6b6b6;
+    --greenColor: #09a53a;
+}
+:root.dark-active .dark {
+    /* top: 5.3px; */
+}
+:root.dark-active .dark i {
+    background-color: transparent;
+}
+:root.dark-active .fa-sun {
+    display: block;
+}
+:root.dark-active .fa-moon {
+    display: none;
+}
+:root.dark-active #header nav ul a {
+    color: #fff;
+}
+:root.dark-active .heading {
+    color: var(--mainColor)
+}
+:root.dark-active form {
+    box-shadow: 0px 0px 17px 2px #1b1b1b !important;
+}
+:root.dark-active input:not([type="submit"]),
+:root.dark-active textarea {
+    background: #171717;
+}
+:root.dark-active .from-button {
+    color: var(--mainColor) 
+}
+:root.dark-active #model, 
+:root.dark-active #members,
+:root.dark-active footer {
+    background: #000000e0;
+    transition: var(--tran3);
+}
+:root.dark-active #members .card img {
+    border: 8px solid #212121;
+}
+:root.dark-active #members .card a {
+    color: var(--mainColor);
+}
+:root.dark-active h1, 
+:root.dark-active .slider .text b,
+:root.dark-active #home i{
+    color: var(--mainColor)
+}
+:root.dark-active .slider .dots li:not(.active-dot) {
+    background-color: var(--mainColor)
+}
+:root.dark-active #dataset,
+:root.dark-active #contact {
+    background-color: #000;
+    transition: var(--tran3);
+}
+:root.dark-active #contact {
+    padding-top: 80px;
+    padding-bottom: 56px;
+}
+:root.dark-active #contact header {
+    top: -16px;
+}
+:root.dark-active #contact img {
+    display: none;
+}
+:root.dark-active #contact form {
+    padding-top: 30px;
+    background-color: #424242
+}
+:root.dark-active .table tr:first-of-type {
+    background-color: #4f4f4f;
+}
+:root.dark-active button:hover::before, 
+:root.dark-active footer p button:hover::after {
+    color: var(--mainColor)
 }
