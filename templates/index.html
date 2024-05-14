@@ -25,7 +25,15 @@
 			rel="stylesheet"/>
 		<!-- CSS File -->
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
+		<!-- PWA -->
+		<link rel="manifest" href="{{ url_for('static', filename='js/manifest.json') }}" />
+		<!-- ios support -->
+		<link rel="apple-touch-icon" href="images/icon-192x192.png" />
+		<link rel="apple-touch-icon" href="images/icon-256x256.png" />
+		<link rel="apple-touch-icon" href="images/icon-384x384.png" />
+		<link rel="apple-touch-icon" href="images/icon-512x512.png" />
+		<meta name="apple-mobile-web-app-status-bar" content="#db4938" />
+		<meta name="theme-color" content="#db4938" />
 	</head>
 	<body>
 		<!-- Dark & Light Mode -->
@@ -213,7 +221,7 @@
 				</header>
 				<main>
 					<div class="card">
-						<img src="{{ url_for('static', filename='images/m-1.jpg') }}" alt="ML Ops/Data Engineer">
+						<img loading="lazy" src="{{ url_for('static', filename='images/m-1.jpg') }}" alt="ML Ops/Data Engineer">
 						<figcaptian>
 							<h4>Youssif Shaaban</h4>
 							<p>ML Ops/Data Engineer</p>
@@ -223,7 +231,7 @@
 						</figcaptian>
 					</div>
 					<div class="card">
-						<img src="{{ url_for('static', filename='images/m2.jpeg') }}" alt="Front-End Developer">
+						<img loading="lazy" src="{{ url_for('static', filename='images/m2.jpeg') }}" alt="Front-End Developer">
 						<figcaptian>
 							<h4>Ahmed Maher</h4>
 							<p>Front-End Developer</p>
@@ -233,7 +241,7 @@
 						</figcaptian>
 					</div>
 					<div class="card">
-						<img src="{{ url_for('static', filename='images/m3.jpg') }}" alt="Data Scientist">
+						<img loading="lazy" src="{{ url_for('static', filename='images/m3.jpg') }}" alt="Data Scientist">
 						<figcaptian>
 							<h4>Ahmed Waheed</h4>
 							<p>Data Scientist</p>
@@ -243,7 +251,7 @@
 						</figcaptian>
 					</div>
 					<div class="card">
-						<img src="{{ url_for('static', filename='images/m-4.jpg') }}" alt="Data Scientist">
+						<img loading="lazy" src="{{ url_for('static', filename='images/m-4.jpg') }}" alt="Data Scientist">
 						<figcaptian>
 							<h4>Mohamed Ehab</h4>
 							<p>Data Scientist</p>
@@ -253,7 +261,7 @@
 						</figcaptian>
 					</div>
 					<div class="card">
-						<img src="{{ url_for('static', filename='images/m-5.jpg') }}" alt="AI Engineer">
+						<img loading="lazy" src="{{ url_for('static', filename='images/m-5.jpg') }}" alt="AI Engineer">
 						<figcaptian>
 							<h4>Mina Farid</h4>
 							<p>AI Engineer</p>
@@ -263,7 +271,7 @@
 						</figcaptian>
 					</div>
 					<div class="card">
-						<img src="{{ url_for('static', filename='images/m-6.jpg') }}" alt="Front End Developer">
+						<img loading="lazy" src="{{ url_for('static', filename='images/m-6.jpg') }}" alt="Front End Developer">
 						<figcaptian>
 							<h4>Peter Nabil</h4>
 							<p>Front-End Developer</p>
@@ -273,7 +281,7 @@
 						</figcaptian>
 					</div>
 					<div class="card">
-						<img src="{{ url_for('static', filename='images/m7.jpg') }}" alt="Back-End Engineer">
+						<img loading="lazy" src="{{ url_for('static', filename='images/m7.jpg') }}" alt="Back-End Engineer">
 						<figcaptian>
 							<h4>Mahmoud Elspaiy</h4>
 							<p>Back-End Engineer</p>
@@ -283,7 +291,7 @@
 						</figcaptian>
 					</div>
 					<div class="card">
-						<img src="{{ url_for('static', filename='images/m8.jpg') }}" alt="Embedded Software Engineer">
+						<img loading="lazy" src="{{ url_for('static', filename='images/m8.jpg') }}" alt="Embedded Software Engineer">
 						<figcaptian>
 							<h4>Mohamed Khedr</h4>
 							<p>Embedded Software Engineer</p>
@@ -314,7 +322,7 @@
 						</ul>
 					</h2>
 				</header>
-				<img src="{{ url_for('static', filename='images/contact.jpg') }}" alt="Contact">
+				<img loading="lazy" src="{{ url_for('static', filename='images/contact.jpg') }}" alt="Contact">
 				<form onsubmit="sendEmail(); reset(); return false">
 					<input type="text" name="Name" id="name" placeholder="Enter Your Name" required>
 					<input type="email"  name="Email" id="email" placeholder="Enter Your email" required>

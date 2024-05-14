@@ -1,0 +1,31 @@
+{
+    "name": "Wind Turbine Power Prediction APP",
+    "short_name": "Wind Turbine APP",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#fdfdfd",
+    "theme_color": "#db4938",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "../images/logo.jpg",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "../images/logo.jpg",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "../images/logo.jpg",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "../images/logo.jpg",
+            "type": "image/png",
+            "sizes": "144x144"
+        }
+    ]
+}

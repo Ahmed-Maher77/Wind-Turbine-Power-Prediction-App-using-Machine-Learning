@@ -15,6 +15,9 @@ This project involves the development of a machine learning model deployed on a 
 - <strong>Youssif Qzamel</strong> &nbsp;  <a href="https://www.linkedin.com/in/youssif-qzamel-7b41b9181/" title="Go To LinkedIn"><img src="https://github.com/Ahmed-Maher77/Wind-Turbine-Power-Prediction-App-using-Machine-Learning/assets/112467034/e9c5daf1-2ffb-4314-98c7-c5b7ef9f4ca2" alt="Go To LinkedIn" width="15"> LinkedIn</a>
 - <strong>Mohamed Ehab</strong> &nbsp;  <a href="https://www.linkedin.com/in/mohamed-ehab-990052227/" title="Go To LinkedIn"><img src="https://github.com/Ahmed-Maher77/Wind-Turbine-Power-Prediction-App-using-Machine-Learning/assets/112467034/e9c5daf1-2ffb-4314-98c7-c5b7ef9f4ca2" alt="Go To LinkedIn" width="15"> LinkedIn</a>
 - <strong>Mina Farid</strong> &nbsp;  <a href="https://www.linkedin.com/in/mina-farid-b325b623a" title="Go To LinkedIn"><img src="https://github.com/Ahmed-Maher77/Wind-Turbine-Power-Prediction-App-using-Machine-Learning/assets/112467034/e9c5daf1-2ffb-4314-98c7-c5b7ef9f4ca2" alt="Go To LinkedIn" width="15"> LinkedIn</a>
+- <strong>Mohamed Khedr</strong> &nbsp;  <a href="https://www.linkedin.com/in/mohamed-khedr-6a2408220/" title="Go To LinkedIn"><img src="https://github.com/Ahmed-Maher77/Wind-Turbine-Power-Prediction-App-using-Machine-Learning/assets/112467034/e9c5daf1-2ffb-4314-98c7-c5b7ef9f4ca2" alt="Go To LinkedIn" width="15"> LinkedIn</a>
+- <strong>Peter Nabil</strong> &nbsp;  <a href="https://www.linkedin.com/in/peter-nabil-871884282/" title="Go To LinkedIn"><img src="https://github.com/Ahmed-Maher77/Wind-Turbine-Power-Prediction-App-using-Machine-Learning/assets/112467034/e9c5daf1-2ffb-4314-98c7-c5b7ef9f4ca2" alt="Go To LinkedIn" width="15"> LinkedIn</a>
+- <strong>Mahmoud Elspaiy</strong>
 
 
 

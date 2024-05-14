@@ -39,8 +39,10 @@ const burgerIcon = document.querySelector("#header nav > i"),
 document.onclick = function (e) {
 	if (e.target === burgerIcon) {
 		menuList.classList.add("nav-active");
+        darkDiv.style.display = 'none'
 	} else if (e.target === closeMenuBtn || e.target !== menuList) {
-		menuList.classList.remove("nav-active");
+        menuList.classList.remove("nav-active");
+        darkDiv.style.display = 'block'
 	} else {
 		anchors.forEach((a) =>
 			a === e.target ? menuList.classList.remove("nav-active") : null
@@ -120,7 +122,7 @@ function sendEmail() {
 }
 
 // Dark Mode
-const darkDiv = document.querySelector('.dark'),
+var darkDiv = document.querySelector('.dark'),
     darkBtns = document.querySelectorAll('.dark i'),
     sunBtn = document.querySelector('.dark .fa-sun'),
     moonBtn = document.querySelector('.dark .fa-moon');
@@ -133,4 +135,14 @@ darkDiv.onclick = function(e) {
                 document.documentElement.classList.remove('dark-active')
             }
     })
+}
+
+// PWA 
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+        navigator.serviceWorker
+            .register("/serviceWorker.js")
+            .then((res) => console.log("service worker registered"))
+            .catch((err) => console.log("service worker not registered", err));
+    });
 }
