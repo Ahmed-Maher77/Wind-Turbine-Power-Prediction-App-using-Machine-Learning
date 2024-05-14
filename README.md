@@ -1,7 +1,7 @@
 # Wind Turbine Power Predictor
 This project involves the development of a machine learning model deployed on a web application to predict the power output of a wind turbine. The model utilizes real-time environmental and operational data sourced from a wind turbine's Supervisory Control and Data Acquisition (SCADA) system in Turkey. Features such as wind speed, wind direction, and theoretical power curve are analyzed to optimize wind turbine performance and enhance energy production efficiency. By integrating the model into a web application, users can access predictions and insights remotely, facilitating informed decision-making and promoting the sustainable utilization of renewable energy resources.
 
-**Used Technologies:** Python - Flask Framework - JSON - JavaScript - HTML/HTML5 - CSS/CSS3 - PWA - Python Libraries (pandas - numpy - matplotlib - seaborn - sklearn - catboost - xgboost) - ML Algorithms (GradientBoostingRegressor - SVR - RandomForestRegressor - LinearRegression - ExtraTreesRegressor - AdaBoostRegressor - DecisionTreeRegressor - XGBRegressor - XGBRFRegressor - CatBoostRegressor)
+**Used Technologies:** Python - Flask Framework - JSON - JavaScript - HTML/HTML5 - CSS/CSS3 - PWA - Python Libraries (pandas - numpy - matplotlib - seaborn - sklearn - catboost - xgboost) - ML Algorithms (GradientBoostingRegressor - SVR - RandomForestRegressor - LinearRegression - ExtraTreesRegressor - AdaBoostRegressor - DecisionTreeRegressor - XGBRegressor - XGBRFRegressor - CatBoostRegressor) <br>
 **Demo (Live Preview):** <a src="https://mlwindturbine.pythonanywhere.com/" target="_blank">https://mlwindturbine.pythonanywhere.com/</a>
 
 ## Key Features:
