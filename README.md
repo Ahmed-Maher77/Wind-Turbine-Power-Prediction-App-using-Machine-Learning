@@ -1,9 +1,11 @@
 # Wind Turbine Power Predictor
 This project involves the development of a machine learning model deployed on a web application to predict the power output of a wind turbine. The model utilizes real-time environmental and operational data sourced from a wind turbine's Supervisory Control and Data Acquisition (SCADA) system in Turkey. Features such as wind speed, wind direction, and theoretical power curve are analyzed to optimize wind turbine performance and enhance energy production efficiency. By integrating the model into a web application, users can access predictions and insights remotely, facilitating informed decision-making and promoting the sustainable utilization of renewable energy resources.
 
+<br>
 **Used Technologies:** Python - Flask Framework - JSON - JavaScript - HTML/HTML5 - CSS/CSS3 - PWA - Python Libraries (pandas - numpy - matplotlib - seaborn - sklearn - catboost - xgboost) - ML Algorithms (GradientBoostingRegressor - SVR - RandomForestRegressor - LinearRegression - ExtraTreesRegressor - AdaBoostRegressor - DecisionTreeRegressor - XGBRegressor - XGBRFRegressor - CatBoostRegressor) <br>
 **Demo (Live Preview):** <a src="https://mlwindturbine.pythonanywhere.com/" target="_blank">https://mlwindturbine.pythonanywhere.com/</a>
 
+<br>
 ## Key Features:
 - <strong>Machine Learning Model</strong>: Utilizes advanced algorithms to predict wind turbine power output.
 - <strong>Real-Time Data Analysis</strong>: Incorporates live data from SCADA systems for accurate predictions.
@@ -11,6 +13,7 @@ This project involves the development of a machine learning model deployed on a 
 - <strong>Enhanced Decision-Making</strong>: Empowers users with actionable insights to optimize turbine operations.
 - <strong>Promotes Sustainability</strong>: Encourages the eco-friendly use of renewable energy resources.
 
+<br>
 ## Web Application Features:
 - <b>Responsive Design:</b> Seamlessly accessible across various devices.
 - <b>High Performance:</b> Utilizing optimal code structure and lazy loading for images to ensure lightning-fast speed and responsiveness.
@@ -22,6 +25,7 @@ This project involves the development of a machine learning model deployed on a 
 - <b>PWA:</b> Our web application is installable on various devices, offering the convenience of a mobile app across multiple platforms.
 - <b>Dark/Light Mode:</b> Enhance user experience with the option to switch between dark and light modes, providing flexibility and reducing eye strain, while accessing predictions and insights for informed decision-making regarding wind turbine operations.
 
+<br>
 ## Contributors:
 - <strong>Ahmed Maher Algohary</strong> (Me) &nbsp;  <a href="https://www.linkedin.com/in/ahmed-maher-algohary/" title="Go To LinkedIn"><img src="https://github.com/Ahmed-Maher77/Wind-Turbine-Power-Prediction-App-using-Machine-Learning/assets/112467034/e9c5daf1-2ffb-4314-98c7-c5b7ef9f4ca2" alt="Go To LinkedIn" width="15"> LinkedIn</a>
 - <strong>Ahmed Waheed</strong> &nbsp;  <a href="https://www.linkedin.com/in/ahmed-waheed-012951223/" title="Go To LinkedIn"><img src="https://github.com/Ahmed-Maher77/Wind-Turbine-Power-Prediction-App-using-Machine-Learning/assets/112467034/e9c5daf1-2ffb-4314-98c7-c5b7ef9f4ca2" alt="Go To LinkedIn" width="15"> LinkedIn</a>
