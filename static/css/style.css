@@ -88,13 +88,8 @@ ul {
     bottom: 0%;
 }
 
-
-
-
-
 /* Header */
 #header {
-    /*position: relative;*/
     position: sticky;
     top: 0;
     z-index: 99;
@@ -181,13 +176,11 @@ transition: var(--tran3)
     background-color: var(--secondary-color)
 }
 
-
-
 /* Home Section */
 #home {
     height: calc(100vh - 55px);
     min-height: calc(700px - 55px);
-    max-height: calc(900px - 55px);
+    max-height: calc(900px);
 }
 .slider,
 .slider .imgs-container,

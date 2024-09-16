@@ -66,40 +66,54 @@ const imgs = document.querySelectorAll("#home .imgs-container figure"),
 let activeIndex = 0,
 	imgsLength = imgs.length,
 	intervalId;
+
 // Change image based on index
 function changeImage(n = 1) {
 	if (n > 0 && activeIndex === imgsLength - 1) {
 		activeIndex = 0;
 	} else if (n < 0 && activeIndex === 0) {
 		activeIndex = imgsLength - 1;
-	} else activeIndex += n;
-	imgs.forEach(
-		(pic, index, arr) =>
-			(pic.style.display = activeIndex === index ? "block" : "none")
-	);
-	dots.forEach((dot, index) =>
-		dot.classList.toggle("active-dot", activeIndex === index)
-	);
+	} else {
+		activeIndex += n;
+	}
+	updateSlider();
 	resetInterval();
 }
+
 // Function to handle slider navigation via dots
 dotsContainer.onclick = function (event) {
 	dots.forEach((dot, index) => {
 		if (event.target === dot) {
-			imgs.forEach(
-				(img, i) => (img.style.display = i === index ? "block" : "none")
-			);
-			dots.forEach((dot, n) => dot.classList.toggle("active-dot", n === index));
+			activeIndex = index; // Set activeIndex to the clicked dot's index
+			updateSlider(); // Update the slider to the selected image
+			resetInterval();
 		}
 	});
-	resetInterval();
 };
-intervalId = setInterval(changeImage, 3000);
-// Reset Interval after each click
+
+// Update the display of images and active dot
+function updateSlider() {
+	imgs.forEach((pic, index) => {
+		pic.style.display = activeIndex === index ? "block" : "none";
+	});
+	dots.forEach((dot, index) => {
+		dot.classList.toggle("active-dot", activeIndex === index);
+	});
+}
+
+// Reset the interval after a manual action
 function resetInterval() {
 	clearInterval(intervalId);
 	intervalId = setInterval(changeImage, 3000);
 }
+
+// Initial interval setup
+intervalId = setInterval(changeImage, 3000);
+
+// Initial call to display the first image and set the first dot as active
+updateSlider();
+
+
 
 // Send email from Javascript
 function sendEmail() {

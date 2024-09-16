@@ -26,8 +26,10 @@ This project involves the development of a machine learning model deployed on a 
 - <b>Clean Code and Best Practices:</b> Prioritizing code clarity, organization, and utilization of modern technologies to ensure browser compatibility and incorporate the latest features and techniques.
 - <b>Simple Animations:</b> Enhancing user experience with subtle yet effective animations.
 - <b>High-Quality UX:</b> Prioritizing user experience with high contrast colors, clear fonts, easy navigation, and smooth interactions.
-- <b>PWA:</b> Our web application is installable on various devices, offering the convenience of a mobile app across multiple platforms.
+- <b>Progressive Web App (PWA):</b> Our web application is installable on various devices, offering the convenience of a mobile app across multiple platforms.
 - <b>Dark/Light Mode:</b> Enhance user experience with the option to switch between dark and light modes, providing flexibility and reducing eye strain, while accessing predictions and insights for informed decision-making regarding wind turbine operations.
+- <b>Email Integration:</b> Automatically sends an email after the form is submitted, using EmailJS, to streamline communication with users.
+- <b>Form Validation:</b> Ensures all required fields are filled out and inputs are correctly formatted before submission. This includes validation for email format and other user inputs.
 
 <br>
 
