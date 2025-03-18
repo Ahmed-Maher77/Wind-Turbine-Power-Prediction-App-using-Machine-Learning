@@ -4,3 +4,4 @@ datetime
 joblib
 scikit-learn
 gunicorn
+catboost
