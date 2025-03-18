@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wind Turbine Power Prediction</title>
+</head>
+<body>
+    <h1>Wind Turbine Power Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="wind_speed">Enter Wind Speed (m/s):</label>
+        <input type="text" id="wind_speed" name="wind_speed"><br><br>
+        
+        <label for="wind_direction">Enter Wind Direction (°):</label>
+        <input type="text" id="wind_direction" name="wind_direction"><br><br>
+        
+        <label for="time">Enter Time (HH:MM:SS):</label>
+        <input type="text" id="time" name="time"><br><br>
+        
+        <label for="date">Enter Date (DD/MM):</label>
+        <input type="text" id="date" name="date"><br><br>
+        
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>

@@ -1,0 +1,112 @@
+/* Variables */
+:root {
+    --trans-2: 0.2s
+}
+/* Container */
+/* .stApp.stAppEmbeddingId-sckf5v6iphqm.st-emotion-cache-1r4qj8v.erw9t6i1 {
+/* .block-container.st-emotion-cache-1y4p8pa.ea3mdgi5 { 
+    width: 100%;
+    max-width: 100%;
+} */
+body {
+    min-height: 700px;
+}
+.block-container.st-emotion-cache-1y4p8pa.ea3mdgi5 {
+    padding: 60px 0 0;
+}
+.row-widget,
+.element-container.st-emotion-cache-1dy3zdg.e1f1d6gn4,
+.row-widget.stButton {
+    width: 46rem !important;
+    max-width: 92% !important;
+    margin: auto;
+}
+/* Page Title */
+.st-emotion-cache-1629p8f h1 {
+    padding: 0 0 10px;
+    padding-bottom: 0;
+}
+div.st-emotion-cache-eqffof {
+    text-align: center;
+    color: #000
+}
+
+#powered-by-machine-learning {
+    padding-top: 0;
+}
+div.st-emotion-cache-eqffof p {
+    font-size: 18px;
+    color: #6d6464;
+}
+.st-emotion-cache-eqffof p:not(.stAlert p) {
+    margin-bottom: 60px
+}
+/* Input Fields */
+.st-emotion-cache-l9bjmx > p {
+    font-size: 18px;
+}
+/* Confirm Button */
+.stButton {
+    display: flex;
+    justify-content: end;
+}
+button.st-emotion-cache-7ym5gk.ef3psqc12{
+    padding: 7px 18px;
+    background-color: #1976D2;
+    color: #fff;
+    border-color: #1976D2;
+    margin-bottom: 45px;
+    border-radius: 7px;
+    transition: var(--trans-2, 0.3s);
+}
+button.st-emotion-cache-7ym5gk:hover {
+    background-color: transparent;
+    color: #1976D2;
+}
+/* Footer */
+div.st-emotion-cache-eqffof p a {
+    font-weight: bold;
+    color: rgb(0, 119, 255);
+    font-size: 21px;
+    transition-duration: var(--trans-2, 0.3s);
+    margin-left: 5px;
+} 
+div.st-emotion-cache-eqffof p a:hover {
+    color: #00878c;
+    position: relative;
+    transition-duration: var(--trans-2, 0.3s);
+}
+div.st-emotion-cache-eqffof p a:hover::before {
+    content: "Click Here To Get In Touch";
+    position: absolute;
+    top: -44px;
+    left: -55px;
+    width: 259px;
+    padding: 5px 10px;
+    font-weight: 100;
+    font-size: 18px;
+    border-radius: 7px;
+    background-color: rgb(90 106 115);
+    color: #fff;
+}
+div.st-emotion-cache-eqffof p a:hover::after {
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: 56px;
+    border: 9px solid transparent;
+    border-top-color: rgb(90 106 115);
+}
+.st-emotion-cache-10fz3ls p {
+    font-size: 1.2rem;
+}
+.st-emotion-cache-1kyxreq.e115fcil2 {
+    justify-content: center;
+    margin-bottom: 30px;
+}
+/* .element-container.st-emotion-cache-i7xwqo.e1f1d6gn4:last-of-type {
+    width: 100% !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+} */
